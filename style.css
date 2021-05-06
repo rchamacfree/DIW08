@@ -1,0 +1,74 @@
+body {
+    font-family: helvetica, serif;
+    color: purple;
+    background-color: white;
+    width: 90%;
+}
+
+header {
+    padding: 0px 10px 30px 10px;
+    margin: 10px;
+    /*width: 90%;*/
+    height: 10px;
+    border: 2px dotted purple;
+}
+
+fieldset:hover {
+    background-color: #efe9f3;
+}
+
+#formulario {
+    margin: 10px;
+}
+
+#aviso {
+    width: 75%;
+    float: left;
+}
+
+#teclas {
+    width: 20%;
+    text-align: right;
+    float: right;
+}
+
+.asterisco {
+    color: red;
+}
+
+.otros {
+    width: 120px;
+}
+
+span {
+    display: inline-block;
+}
+
+#columnaizq {
+    width: 50%;
+    float: left;
+}
+
+
+/*
+input {
+    float: right;
+    display: inline;
+}*/
+
+#abajo {
+    clear: both;
+    float: left;
+    bottom: 0px;
+    left: 0px;
+    width: 98%;
+    /* border: 2px dotted purple;*/
+    padding: 0px 10px;
+    /*margin: 0px 10px;*/
+}
+
+#botones {
+    float: right;
+    text-align: right;
+    display: inline;
+}

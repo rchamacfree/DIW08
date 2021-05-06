@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ES-es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DIW08</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="javascript.js"></script>
+</head>
+
+<body>
+
+
+    <header>
+        <div id="aviso">
+            <p>Los campos marcados con (<span class="asterisco">*</span>) son obligatorios</p>
+        </div>
+        <div id="teclas">
+            <p>Teclas de acceso rápido</p>
+        </div>
+    </header>
+
+    <div id="formulario">
+        <form method="POST">
+            <fieldset>
+                <legend>DATOS PERSONALES</legend>
+                <div class="linea">
+                    <label><span class="asterisco">* </span><b><u>N</u></b>ombre:</label>
+                    <input type="text" name="nombre" maxlength="20">
+
+                    <label><span class="asterisco">* </span><b><u>P</u></b>rimer Apellido:</label>
+                    <input type="text" name="apellido1" maxlength="20">
+
+                    <label><span class="asterisco">* </span><b><u>S</u></b>egundo Apellido:</label>
+                    <input type="text" name="apellido2" maxlength="20">
+                </div>
+                <div class="linea">
+                    <label><span class="asterisco">* </span>Sexo:  </label>
+                    <input type="radio" value="hombre">
+                    <label><b><u>H</u></b>ombre</label>
+                    <input type="radio" value="mujer">
+                    <label><b><u>M</u></b>ujer</label>
+                </div>
+                <div class="linea">
+                    <label><span class="asterisco">* </span>Grupo de edad:  </label>
+                    <input type="radio" value="menor20">
+                    <label>Menor de <b><u>2</u></b>0</label>
+                    <input type="radio" value="de20a35">
+                    <label>De 20 a <b><u>3</u></b>5</label>
+                    <input type="radio" value="de36a50">
+                    <label>De 36 a <b><u>5</u></b>0</label>
+                    <input type="radio" value="de20a35">
+                    <label>Mayor de 5<b><u>0</u></b></label>
+
+                </div>
+                <div class="linea">
+                    <label><span class="asterisco">* </span>P<b><u>a</u></b>ís de nacimiento:</label>
+                    <select size="1" name="pais">
+                        <option value="Alemania">Alemania</option>
+                        <option value="Bolivia">Bolivia</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Dinamarca">Dinamarca</option>
+                        <option value="España">España</option>
+                        <option value="Finlandia">Finlandia</option>
+                        <option value="Grecia">Grecia</option>
+                        <option value="Holanda">Holanda</option>
+                        <option value="Italia">Italia</option>
+                        <option value="Luxemburgo">Luxemburgo</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>DATOS BANCARIOS</legend>
+                <div class="linea">
+                    <label>C.C.C.</label>
+                    <input type="text" name="nombre" maxlength="20">
+                </div>
+                <div class="linea">
+                    <label>Tipo de cuenta:  </label>
+                    <input type="radio" value="ahorro">
+                    <label>De ahorro</label>
+                    <input type="radio" value="corriente">
+                    <label>Corriente</label>
+                </div>
+                <div class="linea">
+                    <label>Tipo de sucursal:  </label>
+                    <input type="radio" value="banco">
+                    <label>Banco</label>
+                    <input type="radio" value="caja">
+                    <label>Caja</label>
+                </div>
+                <div class="linea">
+                    <label>Servicios Contratados: </label>
+                    <input type="checkbox" value="nomina">
+                    <label>Nómina domiciliada</label>
+                    <input type="checkbox" value="hipoteca">
+                    <label>Préstamo hipotecario</label>
+                    <input type="checkbox" value="personal">
+                    <label>Préstamo personal</label>
+                    <input type="checkbox" value="seguridad">
+                    <label>caja de seguridad</label>
+                </div>
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend>OTROS DATOS DE INTERÉS</legend>
+
+                <div id="columnaizq">
+                    <div class="linea">
+                        <label>¿Está usted interesado en alguno de estos temas?</label>
+                    </div>
+
+                    <div class="linea">
+                        <span class="otros">
+                            <input type="checkbox" name="libros">
+                            <label>Libros</label>
+                        </span>
+                        <span class="otros">
+                            <input type="checkbox" name="viajes">
+                            <label>Viajes</label>
+                        </span>
+                        <span class="otros">
+                            <input type="checkbox" name="informatica">
+                            <label>Informática</label>
+                        </span>
+                    </div>
+                    <div class="linea">
+                        <span class="otros">
+                            <input type="checkbox" name="cursos">
+                            <label>Cursos</label>
+                        </span>
+                        <span class="otros">
+                            <input type="checkbox" name="seguros">
+                            <label>Seguros</label>
+                        </span>
+                        <span class="otros">
+                            <input type="checkbox" name="musica">
+                            <label>Música</label>
+                        </span>
+                    </div>
+                    <div class="linea">
+                        <span class="otros">
+                            <input type="checkbox" name="apuestas">
+                            <label>Apuestas</label>
+                        </span>
+                        <span class="otros">
+                            <input type="checkbox" name="idiomas">
+                            <label>Idiomas</label>
+                        </span>
+                        <span class="otros">
+                            <input type="checkbox" name="empleo">
+                            <label>Empleo</label>
+                        </span>
+                    </div>
+                </div>
+
+                <div id="columnader">
+                    <label>Otros temas:</label>
+                    <div class="linea">
+                        <textarea rows="3" cols="30">
+                            Escriba aquí sus temas de interés.
+                       </textarea>
+                    </div>
+
+
+                </div>
+
+
+
+            </fieldset>
+            <div id="abajo">
+                <div id="aviso">
+                    <p>Los campos marcados con (<span class="asterisco">*</span>) son obligatorios</p>
+                </div>
+                <div id="botones">
+                    <input type="submit" value="Enviar datos del formulario">
+                    <input type="reset" value="Limpiar datos del formulario">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+
+</html>
