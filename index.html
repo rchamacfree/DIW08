@@ -5,51 +5,43 @@
     <meta charset="UTF-8">
     <title>DIW08 - Rafael Chamorro</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="javascript.js"></script>
 </head>
 
 <body>
 
 
     <header>
-        <div id="aviso">
-            <p>Los campos marcados con (<span class="asterisco">*</span>) son obligatorios</p>
+        <div class="aviso">
+            <p>Los campos marcados con (<span class="asterisco"> *</span>) son obligatorios</p>
+
         </div>
-<!--       
-	   <div id="teclas">
-            <p>Teclas de acceso rápido</p>
-        </div>
--->		
-		<!--añadido 10-05-->
-		<div id="teclas">
+        <div id="teclas">
             <p>Teclas de acceso rápido</p>
 
             <div id="caja" style="z-index: 1;">
-							<p class="peque">
-								Antes de la tecla de atajo pulsar:<br />
-								<span class="neg">Firefox</span>: Mayusc. + Alt<br />
-								<span class="neg">Opera</span>: Mayusc. + Esc<br />
-								<span class="neg">Chrome, Safari e Iexplore</span>: Alt
-							</p>
-							<hr />
-							<ul>
-									<li>N - Nombre</li>
-									<li>P - Primer apellido</li>
-									<li>S - Segundo apellido</li>
-									<li>H - Sexo, Hombre</li>
-									<li>M - Sexo, Mujer</li>
-									<li>2 - Edad, Menor de 20</li>
-									<li>3 - Edad, De 20 a 35</li>
-									<li>5 - Edad, De 36 a 50</li>
-									<li>0 - Edad, Mayor de 50</li>
-									<li>A - País nacimiento</li>
-									<li>V - Enviar datos</li>
-									<li>B - Borrar datos</li>
-							</ul>
+                <p class="peque">
+                    Antes de la tecla de atajo pulsar:<br />
+                    <span class="neg">Firefox</span>: Mayusc. + Alt<br />
+                    <span class="neg">Opera</span>: Mayusc. + Esc<br />
+                    <span class="neg">Chrome, Safari e Iexplore</span>: Alt
+                </p>
+                <hr />
+                <ul>
+                    <li>N - Nombre</li>
+                    <li>P - Primer apellido</li>
+                    <li>S - Segundo apellido</li>
+                    <li>H - Sexo, Hombre</li>
+                    <li>M - Sexo, Mujer</li>
+                    <li>2 - Edad, Menor de 20</li>
+                    <li>3 - Edad, De 20 a 35</li>
+                    <li>5 - Edad, De 36 a 50</li>
+                    <li>0 - Edad, Mayor de 50</li>
+                    <li>A - País nacimiento</li>
+                    <li>V - Enviar datos</li>
+                    <li>B - Borrar datos</li>
+                </ul>
             </div>
-		</div>
-		<!-- fin añadido -->
-		
+        </div>
     </header>
 
     <div id="formulario">
@@ -57,43 +49,43 @@
             <fieldset>
                 <legend>DATOS PERSONALES</legend>
                 <div class="linea">
-                    <label for="nombre"><span class="asterisco"> &nbsp *  </span><b><u> N</u></b>ombre:</label>
+                    <label for="nombre"><span class="asterisco"> *</span><b><u>N</u></b>ombre:</label>
                     <input type="text" id="nombre" name="nombre" maxlength="20" accesskey="n" required autofocus>
 
-                    <label for="apellido1"><span class="asterisco"> &nbsp *  </span><b><u> P</u></b>rimer Apellido:</label>
+                    <label for="apellido1"><span class="asterisco"> *</span><b><u>P</u></b>rimer Apellido:</label>
                     <input type="text" id="apellido1" name="apellido1" maxlength="20" accesskey="p" required>
 
-                    <label for="apellido2"><span class="asterisco"> &nbsp *  </span><b><u> S</u></b>egundo Apellido:</label>
+                    <label for="apellido2"><span class="asterisco"> *</span><b><u>S</u></b>egundo Apellido:</label>
                     <input type="text" id="apellido2" name="apellido2" maxlength="20" accesskey="s" required>
                 </div>
                 <div class="linea">
-                    <label for="sexo"><span class="asterisco">  &nbsp * &nbsp </span id="sexo">Sexo:  </label>
+                    <label for="hombre"><span class="asterisco"> * </span>Sexo:  </label>
                     <input type="radio" name="sexo" id="hombre" value="hombre" accesskey="h">
                     <label><b><u>H</u></b>ombre</label>
                     <input type="radio" name="sexo" id="mujer" value="mujer" accesskey="m">
                     <label><b><u>M</u></b>ujer</label>
                 </div>
                 <div class="linea">
-                    <label for="grupoedad"><span class="asterisco">&nbsp * &nbsp </span id="grupoedad">Grupo de edad:  </label>
-                   
-				    <input type="radio" name="edad" id="menor20" value="menor20" accesskey="2">
+                    <label><span class="asterisco"> * </span>Grupo de edad:  </label>
+
+                    <input type="radio" name="edad" id="menor20" value="menor20" accesskey="2">
                     <label for="menor20">Menor de <b><u>2</u></b>0</label>
-                 
-				    <input type="radio" name="edad" id="de20a35" value="de20a35" accesskey="3">
+
+                    <input type="radio" name="edad" id="de20a35" value="de20a35" accesskey="3">
                     <label for="de20a35">De 20 a <b><u>3</u></b>5</label>
-                   
-				    <input type="radio" name="edad" id="de36a50" value="de36a50" accesskey="5">
+
+                    <input type="radio" name="edad" id="de36a50" value="de36a50" accesskey="5">
                     <label for="de36a50">De 36 a <b><u>5</u></b>0</label>
-                   
-				    <input type="radio" name="edad" id="mayor50" value="mayor50" accesskey="0">
+
+                    <input type="radio" name="edad" id="mayor50" value="mayor50" accesskey="0">
                     <label for="mayor50">Mayor de 5<b><u>0</u></b></label>
 
                 </div>
-				
+
                 <div class="linea">
-                    <label><span class="asterisco">&nbsp * &nbsp  </span>P<b><u>a</u></b>ís de nacimiento:</label>
-                    <select size="1" id="pais" name="pais" accesskey="a" required>
-                        <option value="Alemania">Alemania</option>
+                    <label><span class="asterisco">*</span>P<b><u>a</u></b>ís de nacimiento:</label>
+                    <select id="pais" size="1" name="pais" accesskey="a">
+                        <option value="Alemania" selected>Alemania</option>
                         <option value="Bolivia">Bolivia</option>
                         <option value="Canada">Canada</option>
                         <option value="Dinamarca">Dinamarca</option>
@@ -208,17 +200,25 @@
 
             </fieldset>
             <div id="abajo">
-                <div id="aviso">
+                <div class="aviso">
                     <p>Los campos marcados con (<span class="asterisco">*</span>) son obligatorios</p>
                 </div>
                 <div id="botones">
-                    <input type="submit" value="Enviar datos del formulario" accesskey="v">
+                    <input type="submit" id="enviar" value="Enviar datos del formulario" accesskey="v">
                     <input type="reset" value="Limpiar datos del formulario" accesskey="b">
                 </div>
             </div>
         </form>
 
     </div>
+    <footer>
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="¡CSS Válido!" />
+            </a>
+        </p>
+
+    </footer>
 
 </body>
 
