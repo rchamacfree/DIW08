@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>DIW08</title>
+    <title>DIW08 - Rafael Chamorro</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="javascript.js"></script>
 </head>
@@ -15,47 +15,84 @@
         <div id="aviso">
             <p>Los campos marcados con (<span class="asterisco">*</span>) son obligatorios</p>
         </div>
-        <div id="teclas">
+<!--       
+	   <div id="teclas">
             <p>Teclas de acceso rápido</p>
         </div>
+-->		
+		<!--añadido 10-05-->
+		<div id="teclas">
+            <p>Teclas de acceso rápido</p>
+
+            <div id="caja" style="z-index: 1;">
+							<p class="peque">
+								Antes de la tecla de atajo pulsar:<br />
+								<span class="neg">Firefox</span>: Mayusc. + Alt<br />
+								<span class="neg">Opera</span>: Mayusc. + Esc<br />
+								<span class="neg">Chrome, Safari e Iexplore</span>: Alt
+							</p>
+							<hr />
+							<ul>
+									<li>N - Nombre</li>
+									<li>P - Primer apellido</li>
+									<li>S - Segundo apellido</li>
+									<li>H - Sexo, Hombre</li>
+									<li>M - Sexo, Mujer</li>
+									<li>2 - Edad, Menor de 20</li>
+									<li>3 - Edad, De 20 a 35</li>
+									<li>5 - Edad, De 36 a 50</li>
+									<li>0 - Edad, Mayor de 50</li>
+									<li>A - País nacimiento</li>
+									<li>V - Enviar datos</li>
+									<li>B - Borrar datos</li>
+							</ul>
+            </div>
+		</div>
+		<!-- fin añadido -->
+		
     </header>
 
     <div id="formulario">
-        <form method="POST">
+        <form method="POST" autocomplete="on">
             <fieldset>
                 <legend>DATOS PERSONALES</legend>
                 <div class="linea">
-                    <label><span class="asterisco">* </span><b><u>N</u></b>ombre:</label>
-                    <input type="text" name="nombre" maxlength="20">
+                    <label for="nombre"><span class="asterisco"> &nbsp *  </span><b><u> N</u></b>ombre:</label>
+                    <input type="text" id="nombre" name="nombre" maxlength="20" accesskey="n" required autofocus>
 
-                    <label><span class="asterisco">* </span><b><u>P</u></b>rimer Apellido:</label>
-                    <input type="text" name="apellido1" maxlength="20">
+                    <label for="apellido1"><span class="asterisco"> &nbsp *  </span><b><u> P</u></b>rimer Apellido:</label>
+                    <input type="text" id="apellido1" name="apellido1" maxlength="20" accesskey="p" required>
 
-                    <label><span class="asterisco">* </span><b><u>S</u></b>egundo Apellido:</label>
-                    <input type="text" name="apellido2" maxlength="20">
+                    <label for="apellido2"><span class="asterisco"> &nbsp *  </span><b><u> S</u></b>egundo Apellido:</label>
+                    <input type="text" id="apellido2" name="apellido2" maxlength="20" accesskey="s" required>
                 </div>
                 <div class="linea">
-                    <label><span class="asterisco">* </span>Sexo:  </label>
-                    <input type="radio" value="hombre">
+                    <label for="sexo"><span class="asterisco">  &nbsp * &nbsp </span id="sexo">Sexo:  </label>
+                    <input type="radio" name="sexo" id="hombre" value="hombre" accesskey="h">
                     <label><b><u>H</u></b>ombre</label>
-                    <input type="radio" value="mujer">
+                    <input type="radio" name="sexo" id="mujer" value="mujer" accesskey="m">
                     <label><b><u>M</u></b>ujer</label>
                 </div>
                 <div class="linea">
-                    <label><span class="asterisco">* </span>Grupo de edad:  </label>
-                    <input type="radio" value="menor20">
-                    <label>Menor de <b><u>2</u></b>0</label>
-                    <input type="radio" value="de20a35">
-                    <label>De 20 a <b><u>3</u></b>5</label>
-                    <input type="radio" value="de36a50">
-                    <label>De 36 a <b><u>5</u></b>0</label>
-                    <input type="radio" value="de20a35">
-                    <label>Mayor de 5<b><u>0</u></b></label>
+                    <label for="grupoedad"><span class="asterisco">&nbsp * &nbsp </span id="grupoedad">Grupo de edad:  </label>
+                   
+				    <input type="radio" name="edad" id="menor20" value="menor20" accesskey="2">
+                    <label for="menor20">Menor de <b><u>2</u></b>0</label>
+                 
+				    <input type="radio" name="edad" id="de20a35" value="de20a35" accesskey="3">
+                    <label for="de20a35">De 20 a <b><u>3</u></b>5</label>
+                   
+				    <input type="radio" name="edad" id="de36a50" value="de36a50" accesskey="5">
+                    <label for="de36a50">De 36 a <b><u>5</u></b>0</label>
+                   
+				    <input type="radio" name="edad" id="mayor50" value="mayor50" accesskey="0">
+                    <label for="mayor50">Mayor de 5<b><u>0</u></b></label>
 
                 </div>
+				
                 <div class="linea">
-                    <label><span class="asterisco">* </span>P<b><u>a</u></b>ís de nacimiento:</label>
-                    <select size="1" name="pais">
+                    <label><span class="asterisco">&nbsp * &nbsp  </span>P<b><u>a</u></b>ís de nacimiento:</label>
+                    <select size="1" id="pais" name="pais" accesskey="a" required>
                         <option value="Alemania">Alemania</option>
                         <option value="Bolivia">Bolivia</option>
                         <option value="Canada">Canada</option>
@@ -73,20 +110,20 @@
                 <legend>DATOS BANCARIOS</legend>
                 <div class="linea">
                     <label>C.C.C.</label>
-                    <input type="text" name="nombre" maxlength="20">
+                    <input type="text" name="nombre" maxlength="20" pattern="[0-9]{20}">
                 </div>
                 <div class="linea">
                     <label>Tipo de cuenta:  </label>
-                    <input type="radio" value="ahorro">
+                    <input type="radio" name="tipoc" id="ahorro" value="ahorro">
                     <label>De ahorro</label>
-                    <input type="radio" value="corriente">
+                    <input type="radio" name="tipoc" id="corriente" value="corriente">
                     <label>Corriente</label>
                 </div>
                 <div class="linea">
                     <label>Tipo de sucursal:  </label>
-                    <input type="radio" value="banco">
+                    <input type="radio" name="tipos" value="banco">
                     <label>Banco</label>
-                    <input type="radio" value="caja">
+                    <input type="radio" name="tipos" value="caja">
                     <label>Caja</label>
                 </div>
                 <div class="linea">
@@ -159,8 +196,8 @@
                 <div id="columnader">
                     <label>Otros temas:</label>
                     <div class="linea">
-                        <textarea rows="3" cols="30">
-                            Escriba aquí sus temas de interés.
+                        <textarea rows="3" cols="30" placeholder="Escriba aquí sus áreas de interés">
+                           Escriba aquí otros temas de interés.
                        </textarea>
                     </div>
 
@@ -175,8 +212,8 @@
                     <p>Los campos marcados con (<span class="asterisco">*</span>) son obligatorios</p>
                 </div>
                 <div id="botones">
-                    <input type="submit" value="Enviar datos del formulario">
-                    <input type="reset" value="Limpiar datos del formulario">
+                    <input type="submit" value="Enviar datos del formulario" accesskey="v">
+                    <input type="reset" value="Limpiar datos del formulario" accesskey="b">
                 </div>
             </div>
         </form>
