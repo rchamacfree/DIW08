@@ -7,25 +7,39 @@ body {
 
 header {
     padding: 0px 10px 0px 10px;
-    margin: 10px 10px 10px 10px;
-    /* height: 10px;*/
+    margin: 0px 10px;
     border: 2px dotted purple;
+    border-radius: 10px;
 }
 
 fieldset {
-    margin: 20px 0px;
+    margin: 15px 0px;
+    border: solid 1px purple;
+    border-radius: 10px;
 }
 
 fieldset:hover {
     background-color: #efe9f3;
 }
 
+legend {
+    border: solid 1px purple;
+    border-radius: 10px;
+    padding: 5px 20px;
+    background-color: purple;
+    color: white;
+}
+
 .linea {
-    margin: 20px;
+    margin: 10px;
 }
 
 #formulario {
     margin: 10px;
+}
+
+input {
+    margin-right: 10px;
 }
 
 #aviso {
@@ -74,15 +88,15 @@ span {
 
 #caja {
     position: absolute;
-    width: 250px;
+    width: 280px;
     top: 52px;
     right: 100px;
     background-color: #cfc;
     border: 2px dotted purple;
     text-align: left;
     font-family: verdana;
-    font-size: 15px;
-    padding: 10px 20px 10px 0px;
+    font-size: 14px;
+    padding: 10px 20px 10px 10px;
 }
 
 
